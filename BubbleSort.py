@@ -52,5 +52,20 @@ class TestBubbleSort(unittest.TestCase):
     def test_max_at_start(self):
         self.assertEqual(BubbleSort([5, 1, 2, 3, 4]), [1, 2, 3, 4, 5])
 
+    def test_sorts_original_list(self):
+        nums = [4, 3, 2, 1]
+        original_id = id(nums)
+
+        result = BubbleSort(nums)
+
+        self.assertEqual(nums, [1, 2, 3, 4])
+        self.assertEqual(id(nums), original_id)
+        self.assertIs(result, nums)
+
+    def test_sorts_original_list_with_duplicates(self):
+        nums = [3, 1, 2, 1]
+        BubbleSort(nums)
+
+
 if __name__ == "__main__":
     unittest.main()
