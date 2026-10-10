@@ -22,7 +22,7 @@ def MergeSort(nums: list[int]) -> list[int]:
 
 import unittest
 
-class MergeSort(unittest.TestCase):
+class TestMergeSort(unittest.TestCase):
 
     def test_empty_list(self):
         self.assertEqual(MergeSort([]), [])
