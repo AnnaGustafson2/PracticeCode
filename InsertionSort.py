@@ -1,4 +1,4 @@
-def InsertionSort(nums: list[int]) -> list[int]:
+def insertion_sort(nums: list[int]) -> list[int]:
     print("Insertion sort!")
 
     left = 0
@@ -16,49 +16,49 @@ def InsertionSort(nums: list[int]) -> list[int]:
 
 import unittest
 
-class TestInsertionSort(unittest.TestCase):
+class Testinsertion_sort(unittest.TestCase):
 
     def test_empty_list(self):
-        self.assertEqual(InsertionSort([]), [])
+        self.assertEqual(insertion_sort([]), [])
 
     def test_single_element(self):
-        self.assertEqual(InsertionSort([5]), [5])
+        self.assertEqual(insertion_sort([5]), [5])
 
     def test_two_elements_swapped(self):
-            self.assertEqual(InsertionSort([2, 1]), [1, 2])
+            self.assertEqual(insertion_sort([2, 1]), [1, 2])
     
     def test_two_elements_ordered(self):
-        self.assertEqual(InsertionSort([1, 2]), [1, 2])
+        self.assertEqual(insertion_sort([1, 2]), [1, 2])
 
     def test_sorted_list(self):
-        self.assertEqual(InsertionSort([1, 2, 3, 4, 5]), [1, 2, 3, 4, 5])
+        self.assertEqual(insertion_sort([1, 2, 3, 4, 5]), [1, 2, 3, 4, 5])
 
     def test_reverse_sorted_list(self):
-        self.assertEqual(InsertionSort([5, 4, 3, 2, 1]), [1, 2, 3, 4, 5])
+        self.assertEqual(insertion_sort([5, 4, 3, 2, 1]), [1, 2, 3, 4, 5])
 
     def test_unsorted_list(self):
-        self.assertEqual(InsertionSort([4, 6, 2, 1, 10]), [1, 2, 4, 6, 10])
+        self.assertEqual(insertion_sort([4, 6, 2, 1, 10]), [1, 2, 4, 6, 10])
 
     def test_duplicates(self):
-        self.assertEqual(InsertionSort([3, 1, 2, 3, 1]), [1, 1, 2, 3, 3])
+        self.assertEqual(insertion_sort([3, 1, 2, 3, 1]), [1, 1, 2, 3, 3])
 
     def test_negative_numbers(self):
-        self.assertEqual(InsertionSort([0, -3, 5, -1, 2]), [-3, -1, 0, 2, 5])
+        self.assertEqual(insertion_sort([0, -3, 5, -1, 2]), [-3, -1, 0, 2, 5])
 
     def test_all_equal(self):
-        self.assertEqual(InsertionSort([4, 4, 4, 4]), [4, 4, 4, 4])
+        self.assertEqual(insertion_sort([4, 4, 4, 4]), [4, 4, 4, 4])
 
     def test_min_at_end(self):
-        self.assertEqual(InsertionSort([2, 3, 4, 5, 1]), [1, 2, 3, 4, 5])
+        self.assertEqual(insertion_sort([2, 3, 4, 5, 1]), [1, 2, 3, 4, 5])
 
     def test_max_at_start(self):
-        self.assertEqual(InsertionSort([5, 1, 2, 3, 4]), [1, 2, 3, 4, 5])
+        self.assertEqual(insertion_sort([5, 1, 2, 3, 4]), [1, 2, 3, 4, 5])
 
     def test_sorts_original_list(self):
         nums = [4, 3, 2, 1]
         original_id = id(nums)
 
-        result = InsertionSort(nums)
+        result = insertion_sort(nums)
 
         self.assertEqual(nums, [1, 2, 3, 4])
         self.assertEqual(id(nums), original_id)
@@ -66,7 +66,7 @@ class TestInsertionSort(unittest.TestCase):
 
     def test_sorts_original_list_with_duplicates(self):
         nums = [3, 1, 2, 1]
-        InsertionSort(nums)
+        insertion_sort(nums)
 
 
 if __name__ == "__main__":

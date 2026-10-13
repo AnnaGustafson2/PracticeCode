@@ -1,4 +1,4 @@
-def BoyerMoore(nums: list[int]) -> int | None:
+def boyer_moore(nums: list[int]) -> int | None:
     candidate = None
     count = 0
 
@@ -21,5 +21,5 @@ def BoyerMoore(nums: list[int]) -> int | None:
     return None
 
 if __name__ == "__main__":
-    print("Result for [1, 2, 3]:", BoyerMoore([1, 2, 3]))  
-    print("Result for [2, 2, 1, 1, 2]:", BoyerMoore([2, 2, 1, 1, 2]))
+    print("Result for [1, 2, 3]:", boyer_moore([1, 2, 3]))  
+    print("Result for [2, 2, 1, 1, 2]:", boyer_moore([2, 2, 1, 1, 2]))

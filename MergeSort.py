@@ -1,11 +1,11 @@
-def MergeSort(nums: list[int]) -> list[int]:
+def mege_sort(nums: list[int]) -> list[int]:
     if not nums:
         return []
     if len(nums) == 1:
         return nums
     middle = len(nums) // 2
-    left = MergeSort(nums[:middle])
-    right = MergeSort(nums[middle:])
+    left = mege_sort(nums[:middle])
+    right = mege_sort(nums[middle:])
 
     merged = []
     i = j = 0
@@ -22,43 +22,43 @@ def MergeSort(nums: list[int]) -> list[int]:
 
 import unittest
 
-class TestMergeSort(unittest.TestCase):
+class Testmege_sort(unittest.TestCase):
 
     def test_empty_list(self):
-        self.assertEqual(MergeSort([]), [])
+        self.assertEqual(mege_sort([]), [])
 
     def test_single_element(self):
-        self.assertEqual(MergeSort([5]), [5])
+        self.assertEqual(mege_sort([5]), [5])
 
     def test_two_elements_swapped(self):
-            self.assertEqual(MergeSort([2, 1]), [1, 2])
+            self.assertEqual(mege_sort([2, 1]), [1, 2])
     
     def test_two_elements_ordered(self):
-        self.assertEqual(MergeSort([1, 2]), [1, 2])
+        self.assertEqual(mege_sort([1, 2]), [1, 2])
 
     def test_sorted_list(self):
-        self.assertEqual(MergeSort([1, 2, 3, 4, 5]), [1, 2, 3, 4, 5])
+        self.assertEqual(mege_sort([1, 2, 3, 4, 5]), [1, 2, 3, 4, 5])
 
     def test_reverse_sorted_list(self):
-        self.assertEqual(MergeSort([5, 4, 3, 2, 1]), [1, 2, 3, 4, 5])
+        self.assertEqual(mege_sort([5, 4, 3, 2, 1]), [1, 2, 3, 4, 5])
 
     def test_unsorted_list(self):
-        self.assertEqual(MergeSort([4, 6, 2, 1, 10]), [1, 2, 4, 6, 10])
+        self.assertEqual(mege_sort([4, 6, 2, 1, 10]), [1, 2, 4, 6, 10])
 
     def test_duplicates(self):
-        self.assertEqual(MergeSort([3, 1, 2, 3, 1]), [1, 1, 2, 3, 3])
+        self.assertEqual(mege_sort([3, 1, 2, 3, 1]), [1, 1, 2, 3, 3])
 
     def test_negative_numbers(self):
-        self.assertEqual(MergeSort([0, -3, 5, -1, 2]), [-3, -1, 0, 2, 5])
+        self.assertEqual(mege_sort([0, -3, 5, -1, 2]), [-3, -1, 0, 2, 5])
 
     def test_all_equal(self):
-        self.assertEqual(MergeSort([4, 4, 4, 4]), [4, 4, 4, 4])
+        self.assertEqual(mege_sort([4, 4, 4, 4]), [4, 4, 4, 4])
 
     def test_min_at_end(self):
-        self.assertEqual(MergeSort([2, 3, 4, 5, 1]), [1, 2, 3, 4, 5])
+        self.assertEqual(mege_sort([2, 3, 4, 5, 1]), [1, 2, 3, 4, 5])
 
     def test_max_at_start(self):
-        self.assertEqual(MergeSort([5, 1, 2, 3, 4]), [1, 2, 3, 4, 5])
+        self.assertEqual(mege_sort([5, 1, 2, 3, 4]), [1, 2, 3, 4, 5])
 
 if __name__ == "__main__":
     unittest.main()

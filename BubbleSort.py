@@ -1,4 +1,4 @@
-def BubbleSort(nums: list[int]) -> list[int]:
+def bubble_sort(nums: list[int]) -> list[int]:
     for loop in range(len(nums)):
         swapped = False
 
@@ -14,49 +14,49 @@ def BubbleSort(nums: list[int]) -> list[int]:
 
 import unittest
 
-class TestBubbleSort(unittest.TestCase):
+class Testbubble_sort(unittest.TestCase):
 
     def test_empty_list(self):
-        self.assertEqual(BubbleSort([]), [])
+        self.assertEqual(bubble_sort([]), [])
 
     def test_single_element(self):
-        self.assertEqual(BubbleSort([5]), [5])
+        self.assertEqual(bubble_sort([5]), [5])
 
     def test_two_elements_swapped(self):
-            self.assertEqual(BubbleSort([2, 1]), [1, 2])
+            self.assertEqual(bubble_sort([2, 1]), [1, 2])
     
     def test_two_elements_ordered(self):
-        self.assertEqual(BubbleSort([1, 2]), [1, 2])
+        self.assertEqual(bubble_sort([1, 2]), [1, 2])
 
     def test_sorted_list(self):
-        self.assertEqual(BubbleSort([1, 2, 3, 4, 5]), [1, 2, 3, 4, 5])
+        self.assertEqual(bubble_sort([1, 2, 3, 4, 5]), [1, 2, 3, 4, 5])
 
     def test_reverse_sorted_list(self):
-        self.assertEqual(BubbleSort([5, 4, 3, 2, 1]), [1, 2, 3, 4, 5])
+        self.assertEqual(bubble_sort([5, 4, 3, 2, 1]), [1, 2, 3, 4, 5])
 
     def test_unsorted_list(self):
-        self.assertEqual(BubbleSort([4, 6, 2, 1, 10]), [1, 2, 4, 6, 10])
+        self.assertEqual(bubble_sort([4, 6, 2, 1, 10]), [1, 2, 4, 6, 10])
 
     def test_duplicates(self):
-        self.assertEqual(BubbleSort([3, 1, 2, 3, 1]), [1, 1, 2, 3, 3])
+        self.assertEqual(bubble_sort([3, 1, 2, 3, 1]), [1, 1, 2, 3, 3])
 
     def test_negative_numbers(self):
-        self.assertEqual(BubbleSort([0, -3, 5, -1, 2]), [-3, -1, 0, 2, 5])
+        self.assertEqual(bubble_sort([0, -3, 5, -1, 2]), [-3, -1, 0, 2, 5])
 
     def test_all_equal(self):
-        self.assertEqual(BubbleSort([4, 4, 4, 4]), [4, 4, 4, 4])
+        self.assertEqual(bubble_sort([4, 4, 4, 4]), [4, 4, 4, 4])
 
     def test_min_at_end(self):
-        self.assertEqual(BubbleSort([2, 3, 4, 5, 1]), [1, 2, 3, 4, 5])
+        self.assertEqual(bubble_sort([2, 3, 4, 5, 1]), [1, 2, 3, 4, 5])
 
     def test_max_at_start(self):
-        self.assertEqual(BubbleSort([5, 1, 2, 3, 4]), [1, 2, 3, 4, 5])
+        self.assertEqual(bubble_sort([5, 1, 2, 3, 4]), [1, 2, 3, 4, 5])
 
     def test_sorts_original_list(self):
         nums = [4, 3, 2, 1]
         original_id = id(nums)
 
-        result = BubbleSort(nums)
+        result = bubble_sort(nums)
 
         self.assertEqual(nums, [1, 2, 3, 4])
         self.assertEqual(id(nums), original_id)
@@ -64,7 +64,7 @@ class TestBubbleSort(unittest.TestCase):
 
     def test_sorts_original_list_with_duplicates(self):
         nums = [3, 1, 2, 1]
-        BubbleSort(nums)
+        bubble_sort(nums)
 
 
 if __name__ == "__main__":
