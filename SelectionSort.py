@@ -12,7 +12,7 @@ def selection_sort(nums: list[int]) -> list[int]:
 
 import unittest
 
-class TestSelectionSort(unittest.TestCase):
+class test_selection_sort(unittest.TestCase):
 
     def test_empty_list(self):
         self.assertEqual(selection_sort([]), [])

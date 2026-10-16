@@ -29,7 +29,7 @@ def quick_sort(nums: list[int], start: int = 0, end: int = None) -> list[int]:
     
 import unittest
 
-class TestQuickSort(unittest.TestCase):
+class test_quick_sort(unittest.TestCase):
 
     def test_empty_list(self):
         self.assertEqual(quick_sort([]), [])

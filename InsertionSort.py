@@ -16,7 +16,7 @@ def insertion_sort(nums: list[int]) -> list[int]:
 
 import unittest
 
-class Testinsertion_sort(unittest.TestCase):
+class test_insertion_sort(unittest.TestCase):
 
     def test_empty_list(self):
         self.assertEqual(insertion_sort([]), [])

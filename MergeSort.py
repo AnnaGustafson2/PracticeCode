@@ -22,7 +22,7 @@ def mege_sort(nums: list[int]) -> list[int]:
 
 import unittest
 
-class Testmege_sort(unittest.TestCase):
+class test_mege_sort(unittest.TestCase):
 
     def test_empty_list(self):
         self.assertEqual(mege_sort([]), [])

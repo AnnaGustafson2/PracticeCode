@@ -14,7 +14,7 @@ def bubble_sort(nums: list[int]) -> list[int]:
 
 import unittest
 
-class Testbubble_sort(unittest.TestCase):
+class test_bubble_sort(unittest.TestCase):
 
     def test_empty_list(self):
         self.assertEqual(bubble_sort([]), [])
